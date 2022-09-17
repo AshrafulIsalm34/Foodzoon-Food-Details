@@ -1,0 +1,151 @@
+.food_item_area{
+    padding: 40px 0px;
+    position: relative;
+    .food_banner{
+        position: absolute;
+        max-width: 490px;
+        top: 45%;
+        right: 2%;
+        z-index: -1;
+    }
+    .main_food_item{
+        position:relative;
+        .dolor_sign{
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            top: 40px;
+            padding: 42px;
+            right: -40px;
+            background-color: $font-color-red;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            color: $light-white;
+            h5{
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 38px;
+                color: $white;
+            }
+        }
+        img{
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .sub_food_product{
+            display: flex;
+            justify-content: space-between;
+            .small_product{
+                flex-basis: 22%;
+                cursor: pointer;
+                img{
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    .product_details{
+        margin-top: 120px;
+        margin-left: 60px;
+        .product_content{
+            border-bottom: 1px solid $border-color;
+            margin-bottom: 1rem;
+            h3{
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 38px;
+                color: $font-color-red;
+                vertical-align: top;
+            }
+            p{
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 19px;
+                color: $font-color-black;
+            }
+        }
+        .p_text{
+            border-bottom: 1px solid $border-color;
+            margin-bottom: 1rem;
+            ol{
+                padding-left: 0;
+                li{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: $font-color-black;
+                    .squer{
+                        width: 7px;
+                        height: 7px;
+                        color: $font-color-red;
+                        margin-bottom: 4px;
+                        margin-right: 5px;
+                    
+                    }
+                }
+            }
+        }
+        .quantity{
+            span{
+                font-weight: 18px;
+                font-weight: 600;
+                line-height: 22px;
+                color: $font-color-red;
+                margin-right: 30px;
+                font-size: 18px;
+            }
+            .decrment{
+                width: 30px;
+                height: 30px;
+                background-color: $border-color;
+                font-size: 40px;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-evenly;
+                margin-right: 10px;
+                outline: 0;
+                border: none;
+            }
+            strong{
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                margin-right: 10px;
+                font-size: 30px;
+            }
+            .increment{
+                width: 30px;
+                height: 30px;
+                background-color: $border-color;
+                font-size: 40px;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                outline: 0;
+                border: none;
+            }
+        }
+        .btn_cart{
+            padding: 15px 20px;
+            margin-top: 35px;
+            background-color: $font-color-red;
+            border: 1px solid $font-color-red;
+            color: $white;
+            transition: 0.5s ease-in-out;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 22px;
+            &:hover{
+                background-color: $white;
+                color: $font-color-red;
+            }
+        }
+    }
+}
+

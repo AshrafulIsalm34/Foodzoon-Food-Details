@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+// typography
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    &::-webkit-scrollbar-track {
+        background-color: #EA5455;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #EA5455;
+        border-radius: 20px;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.06);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: backdrop-filter 0.4s;
+        backdrop-filter: blur(10px) opacity(0);
+    }
+    &.overlay{
+        overflow: hidden !important;
+        &:after{
+            opacity: 1;
+            visibility: visible;
+            backdrop-filter: blur(10px) opacity(1);
+        }
+    }
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 600px;
+    font-family: 'lobster', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+ul,ol{
+    list-style-type: none;
+}
+.mx-auto{
+    margin: 0 auto;
+}
+.Raleway{
+    font-family: 'Raleway', sans-serif;
+}
+
+// same price head
+
+
+
+// padding and margin
+@for $i from 1 through 10 {
+    .pt-#{$i*10}{
+        padding-top: $i*10px;
+    }
+    .pb-#{$i*10}{
+        padding-bottom: $i*10px;
+    }
+    .mt-#{$i*10}{
+        margin-top: $i*10px;
+    }
+    .mb-#{$i*10}{
+        margin-bottom: $i*10px;
+    }
+}
+
+
+// color variable 
+$font-color-red:#EA5455;
+$white: #fff;
+$light-white: #FFFFFF;
+$dark-white: #F9F9F9;
+$gray: #666666;
+$font-color-black: #555555;
+$border-color: #EEEEEE;
+$black-color:#1F2228;
+$Monochromatic-Colors: #FF9C07;
+$bag-color: rgba(6, 12, 26, 0.90);
+$bg-white: rgba(255, 255, 255, 0.9);
+$sticktop-bg:rgba(0, 0, 0, 0.1);
+$bg-color:#080C14;
+
+
+
+
+
+
+
+
+
+
+
+
+// text align items
+$align: left, center, right, justify;
+@each $i in $align {
+    .text-#{$i}{
+        text-align: $i;
+    }
+}
+
+// flex css start
+
+$flex: flex, inline-flex, grid;
+@each $i in $flex {
+    .d-#{$i}{
+        display: $i;
+    }
+}
+
+// justify content start
+
+$justify: start, center, end, evenly, space-around, space-between;
+@each $i in $justify {
+    .justify-content-#{$i}{
+        justify-content: $i;
+    }
+} 
+
+// align-items start
+$align-items: start, center, end, stretch, baseline;
+@each $i in $align-items {
+    .align-items-#{$i}{
+        align-items: $i;
+    }
+} 
+

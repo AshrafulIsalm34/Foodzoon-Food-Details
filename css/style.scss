@@ -1,0 +1,230 @@
+@import 'layouts/all';
+
+
+.pricehead{
+   margin-bottom: 40px;
+   position: relative;
+   &::after{
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: $font-color-red;
+   }
+    h5{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: $black-color;
+        margin-bottom: 1rem;
+    }
+}
+
+.nav-bg{
+    background-color: $font-color-red;
+    box-shadow: 0 0 10px 10px $sticktop-bg;
+    z-index: 99999999;
+}
+
+.btn {
+    display: inline-flex;
+    padding: 15px 20px;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 600;
+    vertical-align: middle;
+    transition: all .3s linear 0s;
+    cursor: pointer;
+    text-transform: capitalize;
+    border: none;
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF ;
+    background-color: #EEEEEE;
+    border-radius: 0;
+
+}
+
+.btn_same{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before,
+    &::after {
+        position:absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 1; 
+        font-size: 18px;
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        text-transform: capitalize;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &::before{
+        content: attr(data-text);
+    }
+}
+
+.btn_same{
+    border: 1px solid transparent;
+    background: #EA5455;
+    &.navbar-nav,.btn_same{
+        background: #FFFFFF;
+    }
+    span{
+        transform: scale3d(0.5, 0.5, 1);
+        opacity: 0;
+        visibility: hidden;
+        height: 100%;
+        width: 100%;
+        display: block;
+        transition: 0.3s ease-in-out;
+    }
+    &::before, 
+    &::after{
+        transition: 0.3s ease-in-out;
+        background-color: #EA5455;
+    }
+    &::after {
+        top: 0;
+        content: attr(data-text);
+        clip-path: polygon(-2% 0, 101% 0, 101% 50%, -2% 50%);
+    }
+    &::before {
+        bottom: 0;
+        clip-path: polygon(-2% 50%, 101% 50%, 101% 100%, -2% 100%);
+    }
+    &:hover{
+        background-color: #FFFFFF;
+        color: #EA5455;
+        border: 1px solid $font-color-red;
+        span{
+            transform: scale3d(1, 1, 1);
+            opacity: 1;
+            visibility:visible;
+        }
+        &::after, 
+        &::before {
+            height: 0;
+            opacity: 0;
+            visibility:hidden;
+        }
+        &::before {
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        }
+        &::after {
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+    }
+}
+
+// Light Gray Button
+
+.extera_btn{
+    background-color: #EEEEEE;
+    &::before,
+    &::after {
+        color: black;
+        background-color: #EEEEEE;
+    }
+    &:hover {
+        background-color: #FFFFFF;
+        border-color: #1F2228;
+        color: black;
+    }
+}
+
+
+
+// parelax
+.pralex_relative{
+    position: relative;
+    .paralex_img{
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .simpleParallax {
+            height: 100%;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+}
+
+
+// nice select
+
+.Select-catagory{
+    .nice-select {
+        background: #FFFFFF;
+        border:1px solid $font-color-red;
+        padding: 20px;
+        color: $white;
+        border-radius: 0px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 400;
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        transition: 0s;
+        position: relative;
+        color: #000;
+        .option {
+            font-size: 16px;
+        }
+        &::after {
+            border-bottom: none;
+            border-right: none;
+            content: url('https://api.iconify.design/akar-icons/chevron-down.svg');
+            margin-top: unset;
+            pointer-events: none;
+            right: 25px;
+            top: 25%;
+            transform: translateY(-25%);
+            width: 10px;
+            height: 10px;
+            transition: all .2s ease-in-out;
+        }
+        &.open {
+            &::after {
+                transform: rotateX(-180deg);
+                top: 55%;
+            }
+        }
+        .list {
+           background-color: #fdfdfd;
+           width: 100%;
+           position: absolute;
+           color: #000;
+           border-radius: 0;
+           z-index: 999;
+        }
+    }
+}

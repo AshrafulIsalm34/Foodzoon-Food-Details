@@ -1,0 +1,46 @@
+.food_banner_area{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0px;
+    .food_banner_text{
+        text-align: center;
+        h2{
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 40px;
+            color: $font-color-red;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $gray;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .banner_menu{
+            ol{
+                justify-content: center;
+                li{
+                    padding-right: 20px;
+                    a{
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 19px;
+                        color: $font-color-black;
+                        transition: all 0.1s ease;
+                        &:hover,&.active{
+                            color: $font-color-red;
+                        }
+                    }
+                }
+                .divider{
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

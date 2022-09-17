@@ -1,0 +1,115 @@
+.description_area{
+    .description_conntent{
+        .nav-pills{
+            width: 65%;
+            border-bottom: 1px solid $font-color-red;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            .nav-link{
+                color: $black-color; 
+                background-color:$white;
+                border: none;
+                outline: 0;
+                &.active{
+                    color: $font-color-red;
+                }
+        }  }
+        .description_text{
+            p{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                color: $black-color;
+                &:nth-child(2){
+                    padding-right: 165px;
+                }
+            }
+            ol{
+                padding-left: 0px;
+                li{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: $black-color;
+                    .squer1{
+                        width: 7px;
+                        height: 7px;
+                        color: $font-color-red;
+                        margin-right: 5px;
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }   
+    }
+
+    
+    .review_slider{
+        .owl-stage-outer{
+            position: relative;
+            overflow: hidden;
+            .owl-stage{ 
+                position: relative;
+                touch-action: manipulation;
+                .owl-item{
+                    float: left;
+                    touch-action: pan-y;
+                    user-select: none;
+                }
+            }
+        }
+        .owl-nav.disabled {
+            display: none;
+        }
+        .owl-dots{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            .owl-dot {
+                background: $gray;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                margin: 0px 10px;
+                transition: all .3s ease-in-out;
+                &.active{
+                    background-color: $font-color-red;
+                }
+            }
+        } 
+        .same{
+            .review_content{
+                background-color: $dark-white;
+                padding: 30px;
+                margin-bottom: 30px;
+                h2{
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                h3{
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+                .five_star_rang{
+                    ul{
+                        li{
+                            margin-right: 10px;
+                            color: $Monochromatic-Colors;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }    
+}

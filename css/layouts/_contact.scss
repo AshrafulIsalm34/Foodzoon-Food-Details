@@ -1,0 +1,249 @@
+.contact_area{
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0px;
+    z-index: 1;
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $bag-color;
+        z-index: -1;
+    }
+    
+    .contact_text{
+        .contact_img{
+            img{
+                z-index: 10;
+            }
+        }
+        p{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 26px;
+            vertical-align: top;
+            margin-top: 1rem;
+            color: $white;
+        }
+        .contact_icon{
+            ul{
+            padding-left: 0px;
+                .main_btn{
+                    margin-right: 40px;
+                    display: flex;
+                    border-radius: 30px;
+                    background-color: $dark-white;
+                    transition: all 0.4s ease-in-out;
+                    cursor: pointer;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &:hover{
+                        width: 140px;
+                        background-color: $font-color-red;
+                        span{
+                            width: 100%;
+                            opacity: 1;
+                            color: $white;
+                        }
+                        .icon_btn{
+                            color: $white;
+                        }
+                    }
+                }
+                .icon_btn{
+                    width: 43px;
+                    height: 43px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    color: $font-color-red;
+                    transition: all .4s ease-in-out;
+                }
+                span{
+                    font-size: 16px;
+                    font-weight: 500;
+                    transition: all .4s ease-in-out;
+                    width: 0;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    .sitemap{
+        h2{
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24px;
+            color: $font-color-red;
+        }
+        .site_map_content{
+            display: flex;
+            grid-gap: 24px;
+            ul{
+                list-style-type: disc;
+                padding-left: 1rem;
+                li{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 2.4;
+                    color: $dark-white;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    &:hover,&.active{
+                        color: $font-color-red;
+                    }
+                }
+            }
+        }
+       
+    }
+    .coustomer_support{
+        h2{
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24px;
+            color: $font-color-red;
+        }
+        ul{
+            padding-left: 0rem;
+            li{
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 2.4;
+                color: $dark-white;
+            }
+        }
+    }
+    .address_bar{
+        h2{
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24px;
+            color: $font-color-red;
+        }
+        ul{
+            padding-left: 0rem;
+            .simbol{
+                position: relative;
+                left: 0;
+                top: 33px;
+                color: $font-color-red;
+                font-size: 15px;
+             }
+            li{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 2.4;
+                color: $dark-white;
+                margin-left: 25px;
+            }
+        }
+    }
+    .newsletter{
+        h2{
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 16px;
+            color: $font-color-red;
+            margin-bottom: 25px;
+        }
+        input{
+            padding: 15px;
+            width: 80%;
+            border: 1px solid $font-color-red;
+            background: transparent;
+            border-right: 0;
+            outline: 0;
+            color: $white;
+        }
+        button{
+            padding: 15px;
+            border: 1px solid $font-color-red;
+            background: $font-color-red;
+            outline: 0;
+        }
+    }
+    .pament_methode{
+        h2{
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 16px;
+            color: $font-color-red;
+            margin-bottom: 30px;
+        }
+        ul{
+            padding-left: 0;
+            li{
+                margin-right: 20px;
+                line-height: 20px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .important_link{
+        h2{
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 16px;
+            color: $font-color-red;
+            margin-bottom: 30px;
+        }
+        h3{
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            color: $dark-white;
+        }
+        h4{
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            color: $dark-white;
+        }
+    }
+    .oppening_hours{
+        h2{
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 16px;
+            color: $font-color-red;
+            margin-bottom: 30px;
+        }
+        .single_opening{
+            display: flex;
+            grid-gap: 35px;
+        }
+        ul{
+            padding-left: 0;
+            li{
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19px;
+                color: $dark-white;
+            }
+        }
+    }
+    
+}
